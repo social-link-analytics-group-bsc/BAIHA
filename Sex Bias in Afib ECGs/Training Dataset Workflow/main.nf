@@ -150,11 +150,11 @@ process consolidation {
 	//TODO: Make sure exports of results are correct
 	publishDir results_dir
 
-	publishDir consolidation_dir,
-	pattern: "consolidated_result.json",
-	mode: 'copy',
-	overwrite: false,
-	saveAs: { filename -> consolidation_filename }
+	// publishDir consolidation_dir,
+	// pattern: "consolidated_result.json",
+	// mode: 'copy',
+	// overwrite: false,
+	// saveAs: { filename -> consolidation_filename }
 
 	input:
 	path benchmark_data
