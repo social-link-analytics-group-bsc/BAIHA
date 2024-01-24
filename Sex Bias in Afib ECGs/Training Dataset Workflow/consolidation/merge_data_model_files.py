@@ -6,6 +6,8 @@ import os
 import fnmatch
 from argparse import ArgumentParser
 
+# Test locally: python3 merge_data_model_files.py -v ../validation_output/validation.json -m ../metrics_output/assessment.json -c training_dataset -a ../consolidation_output/ -o consolidated_result.json
+
 
 def main(args):
     # input parameters
