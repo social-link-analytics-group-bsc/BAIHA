@@ -1,0 +1,120 @@
+Jan-23 14:32:50.263 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile docker --input ../input_data/Nuubo_dataset.csv --participant_id Nuubo --challenge_id 'BAIHA:BAIHA_sex-bias-training-datasets' --consolidation_result ./consolidation_output --validation_result ./validation_output --assessment_result ./metrics_output --outdir ./output
+Jan-23 14:32:50.355 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Jan-23 14:32:50.372 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/cfurtick/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Jan-23 14:32:50.381 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-23 14:32:50.382 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-23 14:32:50.384 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-23 14:32:50.391 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-23 14:32:50.402 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/nextflow.config
+Jan-23 14:32:50.403 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/nextflow.config
+Jan-23 14:32:50.421 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Jan-23 14:32:50.878 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [docker]
+Jan-23 14:32:50.904 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jan-23 14:32:50.921 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [drunk_khorana] DSL2 - revision: f822bc2aad
+Jan-23 14:32:50.921 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-23 14:32:50.921 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-23 14:32:50.930 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/cfurtick/.nextflow/secrets/store.json
+Jan-23 14:32:50.934 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4e682398] - activable => nextflow.secret.LocalSecretsProvider@4e682398
+Jan-23 14:32:51.007 [main] DEBUG nextflow.Session - Session UUID: 476da2cc-2fea-433d-adb0-bef43cd3ce97
+Jan-23 14:32:51.008 [main] DEBUG nextflow.Session - Run name: drunk_khorana
+Jan-23 14:32:51.008 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jan-23 14:32:51.013 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jan-23 14:32:51.017 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-23 14:32:51.035 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (17:07 CEST)
+  System: Linux 6.2.0-39-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.21+9-post-Ubuntu-0ubuntu122.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 173379@BSC-8488184106 [127.0.1.1]
+  CPUs: 8 - Mem: 31.1 GB (9.3 GB) - Swap: 0 (0)
+Jan-23 14:32:51.049 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work
+
+Jan-23 14:32:51.050 [main] DEBUG nextflow.Session - Work-dir: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work [null]
+Jan-23 14:32:51.050 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/bin
+Jan-23 14:32:51.059 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-23 14:32:51.069 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-23 14:32:51.115 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-23 14:32:51.124 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jan-23 14:32:51.186 [main] DEBUG nextflow.Session - Session start
+Jan-23 14:32:51.190 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/stats/trace.txt
+Jan-23 14:32:51.540 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-23 14:32:51.544 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `help` -- Initialise it to a default value eg. `params.help = some_value`
+Jan-23 14:32:51.548 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `data_model_export_dir` -- Initialise it to a default value eg. `params.data_model_export_dir = some_value`
+Jan-23 14:32:51.548 [main] INFO  nextflow.Nextflow -          ============================
+         BAIHA BENCHMARKING PIPELINE
+         ============================
+         challenge: training_dataset
+         input directory: ../input_data/Nuubo_dataset.csv
+         dataset name : Nuubo
+         benchmarking community = BAIHA
+         validation results directory: ./validation_output
+         metrics results directory: ./metrics_output
+         consolidated benchmark results directory: ./consolidation_output
+		 results directory: ./output
+         statistics results about nextflow run: stats
+         directory with community-specific results: other
+         output for level 1 directory: null
+         
+Jan-23 14:32:51.613 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:validation` matches process validation
+Jan-23 14:32:51.615 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_4e774fbaf2c5cbce: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/main.nf
+Jan-23 14:32:51.615 [main] DEBUG nextflow.Session - Session aborted -- Cause: A process input channel evaluates to null -- Invalid declaration `file input_file`
+Jan-23 14:32:51.623 [main] ERROR nextflow.cli.Launcher - A process input channel evaluates to null -- Invalid declaration `file input_file`
+java.lang.IllegalArgumentException: A process input channel evaluates to null -- Invalid declaration `file input_file`
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.script.params.BaseInParam.checkFromNotNull(BaseInParam.groovy:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.script.params.BaseInParam.setFrom(BaseInParam.groovy:180)
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:179)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:102)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:408)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:350)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at Script_4e774fbaf2c5cbce$_runScript_closure4$_closure14.doCall(Script_4e774fbaf2c5cbce:186)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:183)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:499)
+	at nextflow.cli.Launcher.main(Launcher.groovy:670)

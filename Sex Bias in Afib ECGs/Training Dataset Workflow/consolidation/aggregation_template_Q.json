@@ -1,0 +1,82 @@
+[
+    {
+        "_id": "ID",
+        "challenge_ids": [
+            
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [],
+                "visualization": {
+                    "type": "bar-plot",
+                    "metric": "CI"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "ID",
+        "challenge_ids": [
+            
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [],
+                "visualization": {
+                    "type": "bar-plot",
+                    "metric": "PLI"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "ID",
+        "challenge_ids": [
+            
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [],
+                "visualization": {
+                    "type": "bar-plot",
+                    "metric": "NLI"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "ID",
+        "challenge_ids": [
+            
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [],
+                "visualization": {
+                    "type": "bar-plot",
+                    "metric": "MCD"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "ID",
+        "challenge_ids": [
+            
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [],
+                "visualization": {
+                    "type": "bar-plot",
+                    "metric": "FCD"
+                }
+            }
+        },
+        "type": "aggregation"
+    }
+]

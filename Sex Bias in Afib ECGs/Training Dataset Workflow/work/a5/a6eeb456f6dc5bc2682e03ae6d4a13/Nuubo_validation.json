@@ -1,0 +1,16 @@
+{
+    "_id": "BAIHA:Nuubo_P",
+    "challenge_id": [
+        "training-datasets"
+    ],
+    "community_id": "BAIHA",
+    "datalink": {
+        "attrs": [
+            "archive"
+        ],
+        "status": "ok",
+        "validation_date": "2024-01-19T14:31:41+00:00"
+    },
+    "participant_id": "Nuubo",
+    "type": "participant"
+}

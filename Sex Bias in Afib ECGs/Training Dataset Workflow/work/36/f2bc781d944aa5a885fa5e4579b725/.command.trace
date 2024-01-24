@@ -1,0 +1,17 @@
+nextflow.trace/v2
+realtime=353
+%cpu=2972
+cpu_model=11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
+rchar=10724585
+wchar=2524
+syscr=1378
+syscw=15
+read_bytes=0
+write_bytes=4096
+%mem=0
+vmem=251748
+rss=15872
+peak_vmem=251748
+peak_rss=15872
+vol_ctxt=3
+inv_ctxt=6

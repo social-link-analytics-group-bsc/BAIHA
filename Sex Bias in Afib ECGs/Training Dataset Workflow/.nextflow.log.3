@@ -1,0 +1,141 @@
+Jan-23 14:41:46.178 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile docker --input ../input_data/Nuubo_dataset.csv --participant_id Nuubo --challenge_id 'BAIHA:BAIHA_sex-bias-training-datasets' --consolidation_result ./consolidation_output --validation_result ./validation_output --assessment_result ./metrics_output --outdir ./output
+Jan-23 14:41:46.279 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Jan-23 14:41:46.292 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/cfurtick/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Jan-23 14:41:46.300 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-23 14:41:46.301 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-23 14:41:46.304 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-23 14:41:46.322 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-23 14:41:46.346 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/nextflow.config
+Jan-23 14:41:46.347 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/nextflow.config
+Jan-23 14:41:46.372 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Jan-23 14:41:46.887 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [docker]
+Jan-23 14:41:46.927 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jan-23 14:41:46.939 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [prickly_albattani] DSL2 - revision: aa68c6ea0c
+Jan-23 14:41:46.939 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-23 14:41:46.940 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-23 14:41:46.947 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/cfurtick/.nextflow/secrets/store.json
+Jan-23 14:41:46.949 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4e682398] - activable => nextflow.secret.LocalSecretsProvider@4e682398
+Jan-23 14:41:46.991 [main] DEBUG nextflow.Session - Session UUID: 07391890-492c-4cfa-acb9-185c43f2cf85
+Jan-23 14:41:46.991 [main] DEBUG nextflow.Session - Run name: prickly_albattani
+Jan-23 14:41:46.992 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jan-23 14:41:46.997 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jan-23 14:41:47.000 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-23 14:41:47.019 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (17:07 CEST)
+  System: Linux 6.2.0-39-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.21+9-post-Ubuntu-0ubuntu122.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 175363@BSC-8488184106 [127.0.1.1]
+  CPUs: 8 - Mem: 31.1 GB (9.3 GB) - Swap: 0 (0)
+Jan-23 14:41:47.034 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work
+
+Jan-23 14:41:47.034 [main] DEBUG nextflow.Session - Work-dir: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work [null]
+Jan-23 14:41:47.034 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/bin
+Jan-23 14:41:47.040 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-23 14:41:47.047 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-23 14:41:47.079 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-23 14:41:47.086 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jan-23 14:41:47.132 [main] DEBUG nextflow.Session - Session start
+Jan-23 14:41:47.135 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/stats/trace.txt
+Jan-23 14:41:47.453 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-23 14:41:47.457 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `help` -- Initialise it to a default value eg. `params.help = some_value`
+Jan-23 14:41:47.461 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `data_model_export_dir` -- Initialise it to a default value eg. `params.data_model_export_dir = some_value`
+Jan-23 14:41:47.462 [main] INFO  nextflow.Nextflow -          ============================
+         BAIHA BENCHMARKING PIPELINE
+         ============================
+         challenge: training_dataset
+         input directory: ../input_data/Nuubo_dataset.csv
+         dataset name : Nuubo
+         benchmarking community = BAIHA
+         validation results directory: ./validation_output
+         metrics results directory: ./metrics_output
+         consolidated benchmark results directory: ./consolidation_output
+		 results directory: ./output
+         statistics results about nextflow run: stats
+         directory with community-specific results: other
+         output for level 1 directory: null
+         
+Jan-23 14:41:47.530 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:validation` matches process validation
+Jan-23 14:41:47.541 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-23 14:41:47.541 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-23 14:41:47.546 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jan-23 14:41:47.549 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=31.1 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Jan-23 14:41:47.551 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jan-23 14:41:47.633 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:compute_metrics` matches process compute_metrics
+Jan-23 14:41:47.635 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-23 14:41:47.636 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-23 14:41:47.644 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:consolidation` matches process consolidation
+Jan-23 14:41:47.645 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-23 14:41:47.645 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-23 14:41:47.651 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: compute_metrics, consolidation, validation
+Jan-23 14:41:47.652 [main] DEBUG nextflow.Session - Igniting dataflow network (3)
+Jan-23 14:41:47.652 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > validation
+Jan-23 14:41:47.653 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > compute_metrics
+Jan-23 14:41:47.653 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > consolidation
+Jan-23 14:41:47.654 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_2ddb237a32d27e4f: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/main.nf
+Jan-23 14:41:47.654 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jan-23 14:41:47.654 [main] DEBUG nextflow.Session - Session await
+Jan-23 14:41:47.732 [Actor Thread 9] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/consolidation_output -- Cause: java.nio.file.NoSuchFileException: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/consolidation_output
+Jan-23 14:41:47.733 [Actor Thread 9] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/output -- Cause: java.nio.file.NoSuchFileException: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/output
+Jan-23 14:41:47.797 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-23 14:41:47.800 [Task submitter] INFO  nextflow.Session - [f5/8bf93f] Submitted process > consolidation (Performing benchmark assessment and building plots)
+Jan-23 14:41:47.809 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-23 14:41:47.810 [Task submitter] INFO  nextflow.Session - [5f/b1d685] Submitted process > validation (Validating training dataset format)
+Jan-23 14:41:48.737 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: validation (Validating training dataset format); status: COMPLETED; exit: 0; error: -; workDir: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work/5f/b1d68567b6a9045c118fbc49e8dbd7]
+Jan-23 14:41:48.757 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-23 14:41:48.760 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-23 14:41:48.760 [Task submitter] INFO  nextflow.Session - [63/b116dd] Submitted process > compute_metrics (Computing metrics for training dataset)
+Jan-23 14:41:49.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: consolidation (Performing benchmark assessment and building plots); status: COMPLETED; exit: 0; error: -; workDir: /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work/f5/8bf93f04632eb9cf73a410337d7e93]
+Jan-23 14:41:49.397 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process `consolidation (Performing benchmark assessment and building plots)` is unable to find [UnixPath]: `/home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work/f5/8bf93f04632eb9cf73a410337d7e93/output` (pattern: `output`)
+Jan-23 14:41:49.400 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=consolidation (Performing benchmark assessment and building plots); work-dir=/home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work/f5/8bf93f04632eb9cf73a410337d7e93
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output` expected by process `consolidation (Performing benchmark assessment and building plots)`
+Jan-23 14:41:49.420 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'consolidation (Performing benchmark assessment and building plots)'
+
+Caused by:
+  Missing output file(s) `output` expected by process `consolidation (Performing benchmark assessment and building plots)`
+
+Command executed:
+
+  python /app/aggregation.py -b metrics_output -a ./metrics_output/Nuubo_assessment.json -o results_dir --offline 1
+  python /app/merge_data_model_files.py -v Nuubo_validation.json -m metrics_output -c training_dataset -a consolidation_output -o consolidated_result.json
+
+Command exit status:
+  0
+
+Command output:
+  {'CI': {'_id': 'BAIHA:_CI_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'CI', 'stderr': 0, 'value': 0.2}, 'participant_id': 'Nuubo', 'type': 'assessment'}, 'FPLP': {'_id': 'BAIHA:_FPLP_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'FPLP', 'stderr': 0, 'value': 0.0}, 'participant_id': 'Nuubo', 'type': 'assessment'}, 'FNLP': {'_id': 'BAIHA:_FNLP_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'FNLP', 'stderr': 0, 'value': 0.0}, 'participant_id': 'Nuubo', 'type': 'assessment'}, 'PLI': {'_id': 'BAIHA:_PLI_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'PLI', 'stderr': 0, 'value': 0.06666666666666667}, 'participant_id': 'Nuubo', 'type': 'assessment'}, 'NLI': {'_id': 'BAIHA:_NLI_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'NLI', 'stderr': 0, 'value': 0.033333333333333326}, 'participant_id': 'Nuubo', 'type': 'assessment'}, 'FCDD': {'_id': 'BAIHA:_FCDD_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'FCDD', 'stderr': 0, 'value': 0.391304347826087}, 'participant_id': 'Nuubo', 'type': 'assessment'}, 'MCDD': {'_id': 'BAIHA:_MCDD_Nuubo_A', 'challenge_id': 'training_dataset', 'community_id': 'BAIHA', 'metrics': {'metric_id': 'MCDD', 'stderr': 0, 'value': -0.3913043478260869}, 'participant_id': 'Nuubo', 'type': 'assessment'}}
+
+Command error:
+  Matplotlib created a temporary config/cache directory at /tmp/matplotlib-zww9ov64 because the default path (/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+  2024-01-23 14:41:48  INFO:Starting script
+  2024-01-23 14:41:48  INFO:Assessment data: ['./metrics_output/Nuubo_assessment.json']
+  2024-01-23 14:41:48  WARNING:Couldn't find an existing aggregation file for challenge training_dataset. Creating a new file from /app/aggregation_template_Q.json!
+  2024-01-23 14:41:48  WARNING:No handles with labels found to put in legend.
+  2024-01-23 14:41:48  WARNING:No handles with labels found to put in legend.
+  2024-01-23 14:41:48  WARNING:No handles with labels found to put in legend.
+  2024-01-23 14:41:48  WARNING:No handles with labels found to put in legend.
+  2024-01-23 14:41:48  WARNING:No handles with labels found to put in legend.
+  2024-01-23 14:41:49  INFO:Finished script successfully.
+
+Work dir:
+  /home/cfurtick/Desktop/Projects/Severo Ochoa/Sex Bias in Afib ECGs/Training Dataset Workflow/work/f5/8bf93f04632eb9cf73a410337d7e93
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Jan-23 14:41:49.429 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `output` expected by process `consolidation (Performing benchmark assessment and building plots)`
+Jan-23 14:41:49.443 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] collect
+
+Jan-23 14:41:49.446 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jan-23 14:41:49.447 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-23 14:41:49.451 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jan-23 14:41:49.452 [main] INFO  nextflow.script.BaseScript - Oops .. something went wrong
+Jan-23 14:41:49.456 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Jan-23 14:41:49.472 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=389ms; failedDuration=973ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Jan-23 14:41:49.472 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jan-23 14:41:49.475 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jan-23 14:41:49.922 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jan-23 14:41:49.967 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jan-23 14:41:49.987 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
