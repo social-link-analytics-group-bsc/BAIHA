@@ -16,16 +16,16 @@ if (params.help) {
 		nextflow run main.nf -profile docker --input {training_dataset} --participant_id {tool.name} --challenge_id training_dataset --aggreg_dir {benchmark.data.dir}
 
 		Run locally:
-		nextflow run main.nf -profile docker --input ../input_data/Nuubo_dataset.csv --participant_id Nuubo --challenge_id BAIHA:BAIHA_sex-bias-training-datasets --aggreg_dir ./consolidation_output --validation_result ./val_output --assessment_result ./metrics_output
+		nextflow run main.nf -profile docker --input ../input_data/Nuubo_dataset.csv --participant_id Nuubo --challenge_ids training-datasets --consolidation_result ./consolidation_output --validation_result ./validation_output --assessment_result ./metrics_output --aggreg_dir ./benchmark_data
 
-	    Inputs:
+	    Specifications for inputs:
 				--input					Training dataset to be assessed
 				--participant_id        Name of the training dataset to be assessed
                 --community_id          Name or OEB permanent ID for the benchmarking community
-                --challenge_ids        Not sure we need this, hardcode for now as 'training_dataset'
+                --challenge_ids         Not sure we need this, hardcode for now as 'training_dataset'
                 --aggreg_dir            Directory where performance metrics for other tools are stored (for consolidation with new results)
  
-	    Outputs:
+	    Specifications for outputs:
                 --validation_result     The output directory where the results from validation step will be saved
                 --assessment_result     The output directory where the results from the computed metrics step will be saved
                 --consolidation_result	The output directory where the conoslidation file will be saved
@@ -45,14 +45,15 @@ if (params.help) {
          ============================
          BAIHA BENCHMARKING PIPELINE
          ============================
+         benchmarking community: ${params.community_id}
          challenge: ${params.challenge_ids}
          input directory: ${params.input}
-         dataset name : ${params.participant_id}
-         benchmarking community = ${params.community_id}
+         participant id: ${params.participant_id}
+         other participant results directory: ${params.aggreg_dir}
          validation results directory: ${params.validation_result}
          metrics results directory: ${params.assessment_result}
-         consolidated benchmark results directory: ${params.consolidation_result}
-		 results directory: ${params.outdir}
+         consolidation results directory: ${params.consolidation_result}
+         overall results directory: ${params.outdir}
          statistics results about nextflow run: ${params.statsdir}
          directory with community-specific results: ${params.otherdir}
          output for level 1 directory: ${params.data_model_export_dir}
@@ -62,11 +63,11 @@ if (params.help) {
 
 // Input
 input_file = file(params.input)
-//input_file = Channel.fromList(params.input)
 tool_name = params.participant_id.replaceAll("\\s","_")
 challenge_id = params.challenge_ids // In OEB, challenges_ids is an array, but in our case, it will always be one value
-//benchmark_data = Channel.fromPath(params.aggreg_dir, type: 'dir' )
 community_id = params.community_id
+// Not sure what to do with the params.aggreg_dir...
+benchmark_data = Channel.fromPath(params.aggreg_dir, type: 'dir' )
 
 // Output
 validation_dir = file(params.validation_result, type: 'dir')
@@ -75,14 +76,14 @@ consolidation_dir = file(params.consolidation_result, type: 'dir')
 results_dir = file(params.outdir, type: 'dir')
 stats_dir = file(params.statsdir, type: 'dir')
 //other_dir = file(params.otherdir, type: 'dir')
-//data_model_export_dir = file(params.params.data_model_export_dir, type: 'dir')
+//data_model_export_dir = file(params.data_model_export_dir, type: 'dir')
 
 // Output filenames
 validation_filename = "${params.participant_id}_validation.json"
 assessment_filename = "${params.participant_id}_assessment.json"
 consolidation_filename = "${params.participant_id}_consolidation.json"
 
-assessment_filepath = "${params.assessment_result}/${assessment_filename}"
+//assessment_filepath = file("${params.assessment_result}/${assessment_filename}", type: 'dir')
 
 
 process validation {
@@ -146,7 +147,7 @@ process compute_metrics {
 // Figure out inputs and outputs of consolidation and make sure they line up
 // Figure out what the file.collect() part in the workflow is and get it to work
 
-//assessment filename needs to be a path to the file
+//assessments needs to be a path but validatio_file is a val, not sure why...?
 
 process consolidation {
 
@@ -161,8 +162,8 @@ process consolidation {
 	saveAs: { filename -> consolidation_filename }
 
 	input:
-	path assessment_dir
-	val assessment_filepath
+	path benchmark_data
+	path assessments
 	val validation_file
 	val challenge_ids
 	val offline
@@ -174,11 +175,11 @@ process consolidation {
 
 	script:
 	"""
-	python /app/aggregation.py -b $assessment_dir -a $assessment_filepath -o results_dir --offline $offline
-	python /app/merge_data_model_files.py -v $validation_file -m $assessment_dir -c $challenge_ids -a $consolidation_dir -o consolidated_result.json
+	python /app/aggregation.py -b $benchmark_data -a $assessments -o results_dir --offline $offline
+	python /app/merge_data_model_files.py -v $validation_file -m $assessments -c $challenge_ids -a results_dir -o consolidated_result.json
+
 	"""
 }
-
 
 
 workflow {
@@ -186,7 +187,7 @@ workflow {
 	validations = validation.out.vf.collect()
 	compute_metrics(validation.out.validation_status, input_file, tool_name, community_id, challenge_id, assessment_filename)
 	assessments = compute_metrics.out.af.collect()
-    consolidation(assessment_dir, assessment_filepath, validation_filename, challenge_id, 1, consolidation_dir)
+    consolidation(benchmark_data, assessments, validations, challenge_id, 1, consolidation_dir)
 }
 
 workflow.onComplete { 
