@@ -82,7 +82,6 @@ stats_dir = file(params.statsdir, type: 'dir')
 validation_filename = "${params.participant_id}_validation.json"
 assessment_filename = "${params.participant_id}_assessment.json"
 consolidation_filename = "${params.participant_id}_consolidation.json"
-
 //assessment_filepath = file("${params.assessment_result}/${assessment_filename}", type: 'dir')
 
 
@@ -143,16 +142,12 @@ process compute_metrics {
 	"""
 }
 
-// TODO: 
-// Figure out inputs and outputs of consolidation and make sure they line up
-// Figure out what the file.collect() part in the workflow is and get it to work
-
-//assessments needs to be a path but validatio_file is a val, not sure why...?
-
+//assessments needs to be a path but validation_file is a val, not sure why, maybe something to do with the aggregation python script?
 process consolidation {
 
 	tag "Performing benchmark assessment and building plots"
 
+	//TODO: Make sure exports of results are correct
 	publishDir results_dir
 
 	publishDir consolidation_dir,
@@ -164,8 +159,8 @@ process consolidation {
 	input:
 	path benchmark_data
 	path assessments
-	val validation_file
-	val challenge_ids
+	val validations
+	val challenge_id
 	val offline
 	path consolidation_dir
 	
@@ -176,7 +171,7 @@ process consolidation {
 	script:
 	"""
 	python /app/aggregation.py -b $benchmark_data -a $assessments -o results_dir --offline $offline
-	python /app/merge_data_model_files.py -v $validation_file -m $assessments -c $challenge_ids -a results_dir -o consolidated_result.json
+	python /app/merge_data_model_files.py -v $validations -m $assessments -c $challenge_id -a results_dir -o consolidated_result.json
 
 	"""
 }
@@ -193,6 +188,3 @@ workflow {
 workflow.onComplete { 
 	println ( workflow.success ? "Done!" : "Oops .. something went wrong" )
 }
-
-// python3 aggregation.py -b ../test_out/metrics_out -a ../test_out/metrics_out/Nuubo_assessment.json -o ../test_out/consolidation_output --offline 1
-// python3 merge_data_model_files.py -v ../val_output/validation.json -m ../metrics_output/assessment.json -c training_dataset -a ../test_out/consolidation_output/ -o consolidated_result.json

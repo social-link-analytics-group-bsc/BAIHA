@@ -7,7 +7,8 @@ from argparse import ArgumentParser, RawTextHelpFormatter
 from assessment_chart import assessment_chart
 from OEB_aggr_query import OEB_aggr_query
 
-# Test locally: python3 aggregation.py -b ../test_out/metrics_out -a ../test_out/metrics_out/Nuubo_assessment.json -o ../test_out/consolidation_output --offline 1
+# Test locally: python3 aggregation.py -b ../metrics_output -a ../metrics_output/Nuubo_assessment.json -o ../consolidation_output --offline 1
+
 
 # set to production link when ready
 DEFAULT_OEB_API = "https://openebench.bsc.es/api/scientific/graphql"
@@ -123,7 +124,7 @@ def main():
 
         # 2.b) If aggregation file in benchmark_dir
         # Load aggregation file from there
-        aggregation_old = os.path.join(benchmark_dir,challenge_id + ".json")
+        aggregation_old = os.path.join(benchmark_dir, challenge_id + ".json")
 
         # Or if necessary template from here
         aggregation_template= os.path.join(os.path.dirname(os.path.realpath(__file__)), "aggregation_template_Q.json")
@@ -301,14 +302,14 @@ def load_aggregation_template(aggregation_template, community_id, EVENT, challen
                 win_item = deepcopy(item)
 
                 win_size = x_win.split(":")[-1]
-                #y_win is where the issue arises
                 y_win = ":".join([y, win_size])
                 win_metrics = f"{x_win}_vs_{y_win}" 
                 win_item["_id"] = base_id + win_metrics
                 win_item["challenge_ids"] = [challenge_id]
-                win_item["datalink"]["inline_data"]["visualization"]["x_axis"] = x_win
-                win_item["datalink"]["inline_data"]["visualization"]["y_axis"] = y_win
-                #win_item["datalink"]["inline_data"]["visualization"]["y_axis"] = y
+                # These used to be set equal to x_win and y_win but that was causing errors so I changed it to just x and y
+                # Double check that this is right and it is not flipping the metrics (setting x-axis to y values and vice versa)
+                win_item["datalink"]["inline_data"]["visualization"]["x_axis"] = x
+                win_item["datalink"]["inline_data"]["visualization"]["y_axis"] = y
                 aggregation.append(win_item)
                 #win_size = CI, x_win = CI, y_win = PLI:CI
                 # Maybe the issue is that usually in OEB there is one metric per challenge, so the scattler plots are one challenge vs another,
@@ -342,8 +343,6 @@ def add_to_aggregation(aggregation, participant_id, challenge):
     '''
     Add the metrics for the current challenge to the challenge's aggregation file. Aggregation file can have more than one aggregation object, one per plot type.
     '''
-
-    print(challenge)
     for item in aggregation:
         assert_object_type(item, "aggregation")
 
@@ -355,8 +354,6 @@ def add_to_aggregation(aggregation, participant_id, challenge):
         participant["participant_id"] = participant_id
         if plot["type"] == Visualisations.TWODPLOT.value:
             try:
-                #print(plot["x_axis"], plot["y_axis"])
-                #print([x for x in challenge.keys()])
                 participant["metric_x"] = challenge[plot["x_axis"]]["metrics"]["value"]
                 participant["metric_y"] = challenge[plot["y_axis"]]["metrics"]["value"]
             except Exception as e:
