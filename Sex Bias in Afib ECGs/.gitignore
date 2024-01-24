@@ -3,3 +3,6 @@
 .nextflow/
 work/
 *.log*
+*_output/
+stats/
+results/
