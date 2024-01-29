@@ -8,3 +8,5 @@ stats/
 results/
 benchmark_data/
 input_data/
+gold_standard/
+venv/
