@@ -9,8 +9,8 @@
                 "challenge_participants": [],
                 "visualization": {
                     "type": "2D-plot",
-                    "x_axis": "CI",
-                    "y_axis": "PLI",
+                    "x_axis": "SP",
+                    "y_axis": "EO",
                     "optimization": "top-left"
                 }
             }
@@ -27,7 +27,7 @@
                 "challenge_participants": [],
                 "visualization": {
                     "type": "bar-plot",
-                    "metric": "CI"
+                    "metric": "OA"
                 }
             }
         },
@@ -43,7 +43,7 @@
                 "challenge_participants": [],
                 "visualization": {
                     "type": "bar-plot",
-                    "metric": "PLI"
+                    "metric": "SP"
                 }
             }
         },
@@ -59,7 +59,7 @@
                 "challenge_participants": [],
                 "visualization": {
                     "type": "bar-plot",
-                    "metric": "NLI"
+                    "metric": "EO"
                 }
             }
         },
@@ -75,7 +75,7 @@
                 "challenge_participants": [],
                 "visualization": {
                     "type": "bar-plot",
-                    "metric": "MCD"
+                    "metric": "PE"
                 }
             }
         },
@@ -91,7 +91,7 @@
                 "challenge_participants": [],
                 "visualization": {
                     "type": "bar-plot",
-                    "metric": "FCD"
+                    "metric": "FNR"
                 }
             }
         },

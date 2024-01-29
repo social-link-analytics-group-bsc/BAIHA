@@ -43,7 +43,7 @@ def validate_input_data(input_dataset, community, challenges, participant_name, 
     # Load the dataset
     try:
         # sep specifies the delimiter, comment specifies that anything after a # should be regarded as a comment, header indicates that this index in the csv should be regarded as a header row and used for columnn names
-        participant_data = pd.read_csv(input_dataset, sep=',', comment="#", header=0) 
+        participant_data = pd.read_csv(input_dataset, header=0, sep=',') 
     except:
         sys.exit("ERROR: Submitted data file {} is not in a valid format!".format(input_dataset))
 
@@ -59,7 +59,7 @@ def validate_input_data(input_dataset, community, challenges, participant_name, 
 
     # Check that there is a column called 'output'
     if 'output' not in submitted_fields:
-        raise ValueError(f"The data does not contain an field called 'output")
+        raise ValueError(f"The data does not contain an field called 'output'")
 
     # # Check that the 'output' column is of type 'boolean' (or 'integer'?)
     # if not all(participant_data['output'].apply(lambda x: isinstance(x, int))):
