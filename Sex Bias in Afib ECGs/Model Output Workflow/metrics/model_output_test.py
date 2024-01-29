@@ -18,6 +18,8 @@
 # From golden dataset...
 # - column labeled 'true_value' that has '1' for atrial fibrillation and '0' for no atrial fibrillation
 
+# Test locally: python3 model_output_test.py -i ../input_data/Nuubo_output.csv -p Nuubo -com BAIHA -c model-output -m ../golden_dataset/key.csv -o ../metrics_output/Nuubo_assessment.json
+
 import numpy as np
 import os
 import pandas as pd
@@ -35,7 +37,7 @@ def main(args):
     community = args.community_name
     challenges = args.challenges
     participant_name = args.participant_name
-    gold_standards_dir = args.metrics_ref
+    gold_standard = args.metrics_ref
     out_path = args.output
 
     # Assuring the output path does exist
@@ -47,28 +49,31 @@ def main(args):
         except OSError as exc:
             print("OS error: {0}".format(exc) + "\nCould not create output path: " + out_path)
 
-    compute_metrics(input_model_output,  gold_standards_dir, challenges, participant_name, community, out_path)
+    compute_metrics(input_model_output,  gold_standard, challenges, participant_name, community, out_path)
 
 
-def compute_metrics(input_model_output,  gold_standards_dir, challenges, participant_name, community, out_path):
+def compute_metrics(input_model_output,  gold_standard, challenges, participant_name, community, out_path):
 
     # Load model output
-    df = pd.read_csv(input_model_output, sep='\t', comment="#", header=0)
+    df = pd.read_csv(input_model_output, sep=',', comment="#", header=0)
 
     # Load true values 
-    df_golden = pd.read_csv(gold_standards_dir, sep='\t', comment="#", header=0)
-    df_golden = df_golden[['patient_id', 'true_value']]
+    df_golden = pd.read_csv(gold_standard, sep=',', comment="#", header=0)
+    df_golden = df_golden[['ID', 'true_value']]
 
     # Join model output and true values 
     # The resulting df will contain only the common key values between the two datasets, will drop ids that are in one but not the other
-    df = df.join(df_golden, on='patient_id', how='inner')
+    df = pd.merge(df, df_golden, on='ID')
 
     # Calculate simple metric values (TP, TN, FP, FN)
-    TP = df[df['diagnosis'] == 'Yes' and df['true_value'] == 1]
-    TN = df[df['diagnosis'] == 'No' and df['true_value'] == 0]
-    FP = df[df['diagnosis'] == 'Yes' and df['true_value'] == 0]
-    FN = df[df['diagnosis'] == 'No' and df['true_value'] == 1]
+    TP = len(df[(df['output'] == 'Yes') & (df['true_value'] == 'Yes')])
+    TN = len(df[(df['output'] == 'No') & (df['true_value'] == 'No')])
+    FP = len(df[(df['output'] == 'Yes') & (df['true_value'] == 'No')])
+    FN = len(df[(df['output'] == 'No') & (df['true_value'] == 'Yes')])
     total_count = len(df)
+
+    if TP+TN+FP+FN != total_count:
+        raise ValueError(f"Simple metrics do not add up correctly.")
 
     # Calculate complex metrics 
     overall_accuracy = (TP + TN) / (total_count)
@@ -85,9 +90,9 @@ def compute_metrics(input_model_output,  gold_standards_dir, challenges, partici
     for key, value in assessment_data.items():
         if key != 'toolname':
             data_id = community + ":" + "_" + key + "_" + participant_name + "_A"
-            assessment = JSON_templates.write_assessment_dataset(data_id, community, participant_name, key, value)
+            assessment = JSON_templates.write_assessment_dataset(data_id, community, challenges, participant_name, key, value, 0)
             # push the assessment datasets for each metric to the main dataset array
-            ALL_ASSESSMENTS.extend(assessment)
+            ALL_ASSESSMENTS.append(assessment)
 
     # once all assessments have been added, print to json file
     with io.open(out_path,
@@ -101,7 +106,7 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("-i", "--input", help="path to input dataset to be validated", required=True)
     parser.add_argument("-com", "--community_name", help="name of benchmarking community", required=True)
-    parser.add_argument("-c", "--challenges", nargs='+', help="list the challenges that this input data is for", required=True)
+    parser.add_argument("-c", "--challenges", help="list the challenges that this input data is for", required=True)
     parser.add_argument("-p", "--participant_name", help="name of the tool used for prediction", required=True)
     parser.add_argument("-o", "--output", help="output path where participant JSON file will be written", required=True)
     parser.add_argument("-m", "--metrics_ref", help="directory that contains the golden dataset", required=True)
