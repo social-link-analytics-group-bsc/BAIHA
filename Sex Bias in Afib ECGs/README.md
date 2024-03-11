@@ -3,6 +3,8 @@ In the descriptions below of the metrics, there are references to ‘positive’
 
 In addition, we are not always striving for the values that signify exact equality between male and female counts and percentages. For example, consider an AI tool used to diagnose autoimmune diseases. 80% of autoimmune diseases are suffered by females, therefore even if our dataset was 50% male samples and 50% female samples, we would and should expect that the value for Positive Label Imbalance is closer to -1 than 0, meaning that a higher percentage of the female samples are ‘positive’ compared to male samples. This examples highlights the fact that the ‘optimal’ or ‘unbiased’ values for these metrics that we are striving for can be highly contextual, depending on the problem that the AI tools is addressing.
 
+These metrics were taken from: https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-detect-data-bias.html
+
 # Training Dataset Challenge
 
 ## Submission Requirements
