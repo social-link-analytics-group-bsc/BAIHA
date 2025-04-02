@@ -1,0 +1,122 @@
+[
+    {
+        "_id": "BAIHA:_Overall_Accuracy_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Overall Accuracy",
+            "stderr": 0,
+            "value": 0.9367088607594937
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Statistical_Parity_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Statistical Parity",
+            "stderr": 0,
+            "value": 0.4810126582278481
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Equal_Opportunity_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Equal Opportunity",
+            "stderr": 0,
+            "value": 0.9230769230769231
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Predictive_Equality_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Predictive Equality",
+            "stderr": 0,
+            "value": 0.05
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_False_Negative_Rate_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "False Negative Rate",
+            "stderr": 0,
+            "value": 0.07692307692307693
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Disparate_Impact_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Disparate Impact",
+            "stderr": 0,
+            "value": 1.1396011396011394
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Accuracy_Difference_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Accuracy Difference",
+            "stderr": 0,
+            "value": -0.026923076923076827
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Difference_in_Conditional_Acceptance_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Difference in Conditional Acceptance",
+            "stderr": 0,
+            "value": -0.1611111111111112
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Difference_in_Conditional_Rejection_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Difference in Conditional Rejection",
+            "stderr": 0,
+            "value": 0.1435406698564593
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    },
+    {
+        "_id": "BAIHA:_Treatment_Equality_Pan-Cancer_A",
+        "challenge_id": "model_output",
+        "community_id": "BAIHA",
+        "metrics": {
+            "metric_id": "Treatment Equality",
+            "stderr": 0,
+            "value": NaN
+        },
+        "participant_id": "Pan-Cancer",
+        "type": "assessment"
+    }
+]

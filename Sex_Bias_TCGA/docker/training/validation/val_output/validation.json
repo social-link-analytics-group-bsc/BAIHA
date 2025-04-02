@@ -1,0 +1,14 @@
+{
+    "_id": "BAIHA:Pan-Cancer_P",
+    "challenge_id": "training_dataset",
+    "community_id": "BAIHA",
+    "datalink": {
+        "attrs": [
+            "archive"
+        ],
+        "status": "ok",
+        "validation_date": "2025-03-20T09:56:28+00:00"
+    },
+    "participant_id": "Pan-Cancer",
+    "type": "participant"
+}

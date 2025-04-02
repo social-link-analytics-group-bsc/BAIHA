@@ -1,0 +1,260 @@
+[
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Equal Opportunity_vs_Predictive Equality:Equal Opportunity",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_x": 0.9230769230769231,
+                        "metric_y": 0.05,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "optimization": "top-left",
+                    "type": "2D-plot",
+                    "x_axis": "Equal Opportunity",
+                    "y_axis": "Predictive Equality"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Difference in Conditional Acceptance_vs_Difference in Conditional Rejection:Difference in Conditional Acceptance",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_x": -0.1611111111111112,
+                        "metric_y": 0.1435406698564593,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "optimization": "top-left",
+                    "type": "2D-plot",
+                    "x_axis": "Difference in Conditional Acceptance",
+                    "y_axis": "Difference in Conditional Rejection"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Overall Accuracy",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 0.9367088607594937,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Overall Accuracy",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Statistical Parity",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 0.4810126582278481,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Statistical Parity",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Equal Opportunity",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 0.9230769230769231,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Equal Opportunity",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Predictive Equality",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 0.05,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Predictive Equality",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:False Negative Rate",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 0.07692307692307693,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "False Negative Rate",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Disparate Impact",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 1.1396011396011394,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Disparate Impact",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Accuracy Difference",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": -0.026923076923076827,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Accuracy Difference",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Difference in Conditional Acceptance",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": -0.1611111111111112,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Difference in Conditional Acceptance",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Difference in Conditional Rejection",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": 0.1435406698564593,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Difference in Conditional Rejection",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    },
+    {
+        "_id": "BAIHA:BAIHA-sex-bias-training-datasets:model_output:Aggregation:Treatment Equality",
+        "challenge_ids": [
+            "model_output"
+        ],
+        "datalink": {
+            "inline_data": {
+                "challenge_participants": [
+                    {
+                        "metric_value": NaN,
+                        "participant_id": "Pan-Cancer"
+                    }
+                ],
+                "visualization": {
+                    "metric": "Treatment Equality",
+                    "type": "bar-plot"
+                }
+            }
+        },
+        "type": "aggregation"
+    }
+]

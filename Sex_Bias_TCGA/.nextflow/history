@@ -1,0 +1,85 @@
+2024-10-26 15:01:25	-	dreamy_edison	-	08ba7bdb4213dfc021ba3ce013119567	f62729d5-3568-44fb-aa07-61432d6e2009	nextflow run main.nf
+2024-10-26 15:36:28	-	astonishing_becquerel	-	08ba7bdb4213dfc021ba3ce013119567	f056cb59-17bc-4154-aec4-1f56fcd86ebc	nextflow run main.nf
+2024-10-26 15:36:51	-	loving_yonath	-	08ba7bdb4213dfc021ba3ce013119567	bd9ce35b-61c9-4c6f-831c-0e069b9d01c5	nextflow run main.nf -profile docker
+2024-10-26 15:40:15	-	pedantic_yalow	-	08ba7bdb4213dfc021ba3ce013119567	e79f9853-ec5b-4951-b679-634e4ababa43	nextflow run main.nf -profile docker
+2024-10-26 15:53:25	-	cheesy_feynman	-	6bfdcdac8b17c57cabf6201d9a677236	7f6c1d48-8461-4b7b-9feb-5e7dd3619b28	nextflow run main.nf -profile docker
+2024-10-26 15:54:39	-	spontaneous_boltzmann	-	6bfdcdac8b17c57cabf6201d9a677236	5aeaa92d-295b-4e9d-9ca4-9b0c8905782b	nextflow run main.nf -profile docker
+2024-10-26 15:55:37	-	jovial_solvay	-	6bfdcdac8b17c57cabf6201d9a677236	4c7cef4a-6073-4867-b640-211c30835e35	nextflow run main.nf -profile docker
+2024-10-26 15:56:05	2.9s	voluminous_albattani	ERR	6bfdcdac8b17c57cabf6201d9a677236	ed407dd1-2552-4bc0-9152-4850cdb5e24c	nextflow run main.nf -profile docker
+2024-10-27 23:35:30	4.7s	suspicious_booth	ERR	6bfdcdac8b17c57cabf6201d9a677236	ccc6b37d-70f8-4339-b670-889af956f042	nextflow main.nf -c nextflow.config
+2024-10-27 23:39:06	20.9s	extravagant_einstein	ERR	6bfdcdac8b17c57cabf6201d9a677236	bcc1c61e-a11c-421f-a5f7-289ae8fd757a	nextflow main.nf -c nextflow.config
+2024-10-27 23:41:38	4.9s	extravagant_shannon	ERR	6bfdcdac8b17c57cabf6201d9a677236	47118b5d-5088-4839-bc8e-d4587be3cc2d	nextflow main.nf -c nextflow.config
+2024-10-27 23:43:51	4.2s	boring_dubinsky	OK	6bfdcdac8b17c57cabf6201d9a677236	4de74aa1-761e-439d-8ada-7da764a26162	nextflow main.nf -c nextflow.config
+2024-10-27 23:47:56	5.4s	pensive_leavitt	OK	6bfdcdac8b17c57cabf6201d9a677236	3eb884ad-7222-407b-8818-0a833e4f352e	nextflow main.nf -c nextflow.config
+2024-10-27 23:59:23	2.3s	big_lattes	OK	6bfdcdac8b17c57cabf6201d9a677236	a2982cbe-29ef-49c4-8bf2-eb6e13555dc3	nextflow main.nf -c nextflow.config
+2024-10-28 00:00:00	2.4s	extravagant_minsky	OK	6bfdcdac8b17c57cabf6201d9a677236	f0e184ee-eae7-4869-a2a4-40f70cdb4ac2	nextflow main.nf -c nextflow.config
+2024-10-28 00:23:58	2.7s	nasty_hodgkin	ERR	6bfdcdac8b17c57cabf6201d9a677236	c02ac1a5-93e6-4b72-8d78-e0795612b0bb	nextflow main.nf -c nextflow.config
+2024-10-28 00:40:18	2.5s	gloomy_hawking	ERR	6bfdcdac8b17c57cabf6201d9a677236	848b77b0-980c-4256-909e-724cea339ed8	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:40:41	2.7s	silly_almeida	ERR	6bfdcdac8b17c57cabf6201d9a677236	d0d1cb34-4df3-40ee-ad5a-1dfd3265f0c0	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:40:58	2s	stoic_keller	ERR	6bfdcdac8b17c57cabf6201d9a677236	14cef620-b272-4781-8b42-44c73ef3529d	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:42:49	2.6s	fabulous_bhaskara	ERR	6bfdcdac8b17c57cabf6201d9a677236	9cbb5935-28e4-45eb-babd-882d1fcf0ef4	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:45:01	2.5s	disturbed_venter	ERR	6bfdcdac8b17c57cabf6201d9a677236	75f33761-b6cc-455f-8175-25f8db026624	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:45:12	2.1s	grave_maxwell	ERR	6bfdcdac8b17c57cabf6201d9a677236	8678646c-9456-458a-870c-886a63c1ca5c	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:48:39	3.4s	zen_darwin	ERR	6bfdcdac8b17c57cabf6201d9a677236	0d04bcda-fba8-4aa5-92b1-97cc1deede3d	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:51:12	3.3s	lethal_pauling	ERR	6bfdcdac8b17c57cabf6201d9a677236	aa4dff37-707f-4c9f-8e5a-8e8a05b93953	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 00:52:49	2.8s	tiny_euler	ERR	6bfdcdac8b17c57cabf6201d9a677236	6b9a4795-e963-4866-8124-e808d953293f	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 01:10:17	3.5s	sharp_einstein	ERR	6bfdcdac8b17c57cabf6201d9a677236	fccfd432-0642-4615-9c48-077eaaa22bd6	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 01:13:24	2.9s	goofy_fermat	ERR	6bfdcdac8b17c57cabf6201d9a677236	9b31efc5-bb12-4cd6-b000-ce62eeb41b19	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 01:14:56	-	high_colden	-	6bfdcdac8b17c57cabf6201d9a677236	4d33e555-ba40-40f1-8700-3fb6054ae413	nextflow main.nf -c nextflow.config -profile conda
+2024-10-28 01:33:03	-	nasty_coulomb	-	6bfdcdac8b17c57cabf6201d9a677236	a93bdc68-0a22-47a3-9fad-e915ba0360ad	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 01:33:30	4.2s	friendly_cajal	ERR	6bfdcdac8b17c57cabf6201d9a677236	b6bc9923-f8d7-4561-a4d3-606adc685a53	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 01:33:59	3.4s	focused_euclid	ERR	6bfdcdac8b17c57cabf6201d9a677236	3df1b59f-7ab3-4566-a541-c7ea0a7c80e4	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 01:35:12	-	loving_kilby	-	6bfdcdac8b17c57cabf6201d9a677236	3caa4b43-c099-498b-ad3e-191b071c511d	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 01:35:29	3.6s	grave_neumann	ERR	6bfdcdac8b17c57cabf6201d9a677236	e425f558-e02d-42f9-a635-a8de5f8be8bc	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 01:41:43	3.4s	shrivelled_babbage	ERR	6bfdcdac8b17c57cabf6201d9a677236	ecffffc1-f746-4988-be25-446bef5c2284	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 02:32:29	3.6s	gloomy_engelbart	OK	6bfdcdac8b17c57cabf6201d9a677236	665840a2-6bc0-42bb-ac4b-dcf00f9c46c9	nextflow main.nf -c nextflow.config -profile docker
+2024-10-28 02:33:51	2.8s	exotic_sax	OK	6bfdcdac8b17c57cabf6201d9a677236	665840a2-6bc0-42bb-ac4b-dcf00f9c46c9	nextflow main.nf -c nextflow.config -profile docker -resume
+2024-10-28 02:34:27	4s	magical_mcnulty	OK	6bfdcdac8b17c57cabf6201d9a677236	665840a2-6bc0-42bb-ac4b-dcf00f9c46c9	nextflow main.nf -c nextflow.config -profile docker -resume
+2024-10-28 02:46:54	5.8s	tender_kay	OK	6bfdcdac8b17c57cabf6201d9a677236	665840a2-6bc0-42bb-ac4b-dcf00f9c46c9	nextflow main.nf -c nextflow.config -profile docker -resume
+2024-10-28 04:42:36	2.4s	nostalgic_williams	OK	6bfdcdac8b17c57cabf6201d9a677236	665840a2-6bc0-42bb-ac4b-dcf00f9c46c9	nextflow main.nf -c nextflow.config -profile docker -resume
+2024-10-28 04:42:55	5.1s	lethal_moriondo	ERR	6bfdcdac8b17c57cabf6201d9a677236	665840a2-6bc0-42bb-ac4b-dcf00f9c46c9	nextflow main.nf -c nextflow.config -profile docker -resume
+2024-10-31 01:54:48	4.9s	elegant_waddington	ERR	6bfdcdac8b17c57cabf6201d9a677236	1f20bb7d-2d73-483b-9b28-67101c83f120	nextflow run main.nf -profile docker
+2024-10-31 01:56:23	11.8s	jolly_minsky	OK	6bfdcdac8b17c57cabf6201d9a677236	3189726b-80bf-4110-b5b6-2f0148922c3b	nextflow run main.nf -profile docker
+2024-10-31 03:32:10	8.1s	naughty_rubens	OK	6bfdcdac8b17c57cabf6201d9a677236	e958a6cb-1600-4e06-afc1-8198db0f9dfb	nextflow run main.nf -profile docker
+2024-10-31 03:33:24	8.5s	elated_carlsson	OK	6bfdcdac8b17c57cabf6201d9a677236	a4044359-a2c5-4409-bb72-aa2887d50d9f	nextflow run main.nf -profile docker
+2024-10-31 03:37:31	8s	sharp_carson	OK	6bfdcdac8b17c57cabf6201d9a677236	a4044359-a2c5-4409-bb72-aa2887d50d9f	nextflow run main.nf -profile docker -resume
+2024-10-31 03:37:58	2.6s	small_knuth	OK	6bfdcdac8b17c57cabf6201d9a677236	a4044359-a2c5-4409-bb72-aa2887d50d9f	nextflow run main.nf -profile docker -resume
+2024-10-31 03:39:13	2.9s	desperate_bernard	OK	6bfdcdac8b17c57cabf6201d9a677236	a4044359-a2c5-4409-bb72-aa2887d50d9f	nextflow run main.nf -profile docker -resume
+2025-01-20 06:54:29	2.6s	special_pike	ERR	6bfdcdac8b17c57cabf6201d9a677236	2f3a626f-c39b-4d3c-ab62-20b112b5c268	nextflow main.nf
+2025-01-20 06:56:03	2.1s	extravagant_keller	ERR	6bfdcdac8b17c57cabf6201d9a677236	33829ede-1e65-429e-8f99-8366a6fea48b	nextflow main.nf -profile docker
+2025-01-20 06:56:52	4.1s	backstabbing_bhabha	ERR	6bfdcdac8b17c57cabf6201d9a677236	762d4b4a-4acf-4b3b-bd84-9a7a3c285771	nextflow main.nf -profile docker
+2025-01-20 06:59:04	2.5s	stoic_hilbert	ERR	6bfdcdac8b17c57cabf6201d9a677236	91eb5228-3b02-423f-a230-7ddea332f988	nextflow main.nf -profile docker
+2025-01-20 06:59:28	2.3s	reverent_magritte	ERR	6bfdcdac8b17c57cabf6201d9a677236	595980f5-2bee-496f-a8ef-647ab0143e3b	nextflow main.nf -profile docker
+2025-01-20 07:00:40	2.7s	extravagant_cuvier	ERR	6bfdcdac8b17c57cabf6201d9a677236	5c05e58a-a2a3-4f65-8cb8-04d4bf5db6cd	nextflow main.nf -profile docker
+2025-01-20 07:01:26	3.3s	sharp_bartik	ERR	6bfdcdac8b17c57cabf6201d9a677236	5b8f5504-2c89-4b82-abe0-2c26a1fcf302	nextflow main.nf -profile docker
+2025-01-20 07:06:37	2.7s	golden_ritchie	ERR	6bfdcdac8b17c57cabf6201d9a677236	42a56b6d-dab8-4e3b-b3fc-25b9bc7c6edf	nextflow main.nf -profile docker
+2025-01-20 07:07:39	6.9s	distracted_neumann	ERR	6bfdcdac8b17c57cabf6201d9a677236	2fd66818-d638-45af-96b9-1e9d8840f3f8	nextflow main.nf -profile docker
+2025-01-20 07:09:23	6.6s	sad_shockley	OK	6bfdcdac8b17c57cabf6201d9a677236	6c252353-0f99-47ec-b806-463808c2145f	nextflow main.nf -profile docker
+2025-01-20 07:10:20	3.5s	voluminous_cantor	ERR	6bfdcdac8b17c57cabf6201d9a677236	a1c4d85e-31bb-4092-ab76-53e2f3131afb	nextflow main.nf -profile docker
+2025-01-20 07:12:30	2s	silly_lorenz	ERR	6bfdcdac8b17c57cabf6201d9a677236	534af6ae-4b0e-4604-ac15-9c3a807f7358	nextflow main.nf -profile docker
+2025-01-20 07:13:32	4.7s	marvelous_mendel	ERR	6bfdcdac8b17c57cabf6201d9a677236	89196256-f1d6-46be-a677-0b6708656288	nextflow main.nf -profile docker
+2025-03-20 10:38:17	3s	romantic_albattani	ERR	6bfdcdac8b17c57cabf6201d9a677236	108954bc-bcb3-42fa-9713-f766e6f62c6b	nextflow run main.nf -profile docker
+2025-03-20 10:39:13	5.2s	zen_chandrasekhar	ERR	6bfdcdac8b17c57cabf6201d9a677236	a303c9e6-8201-4525-9a50-d2fc59602bbf	nextflow run main.nf -profile docker
+2025-03-20 11:48:47	8.2s	scruffy_descartes	OK	6bfdcdac8b17c57cabf6201d9a677236	9857e4cf-2307-49d3-bb29-660de65747a4	nextflow run main.nf -profile docker
+2025-03-20 11:55:35	4.7s	loving_banach	ERR	6bfdcdac8b17c57cabf6201d9a677236	f3be5e1e-7f92-4196-9650-3127002ed88f	nextflow run main.nf -profile docker
+2025-03-20 11:58:14	5.3s	sharp_bhaskara	ERR	6bfdcdac8b17c57cabf6201d9a677236	c9ecd094-1455-4b3b-8e86-67121f6acadc	nextflow run main.nf -profile docker
+2025-03-20 12:03:46	4.9s	drunk_payne	ERR	6bfdcdac8b17c57cabf6201d9a677236	a695d399-8a27-4f6c-90b9-74ac676d5446	nextflow run main.nf -profile docker
+2025-03-21 11:01:39	8.1s	spontaneous_liskov	OK	6bfdcdac8b17c57cabf6201d9a677236	0ff2add7-f22f-4f12-9294-393ff69c9e28	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 11:07:37	6.7s	deadly_swirles	OK	6bfdcdac8b17c57cabf6201d9a677236	9f93b870-332d-41d2-87cd-3accd48de39e	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 11:09:52	6.8s	zen_pauling	OK	6bfdcdac8b17c57cabf6201d9a677236	af9edf9f-5088-4e06-b0a4-88569e6b0c43	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 11:43:49	6.5s	romantic_roentgen	OK	6bfdcdac8b17c57cabf6201d9a677236	b98b69e8-6d70-4ebe-9e7a-7a60fe323909	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 12:12:30	6.6s	fabulous_angela	OK	6bfdcdac8b17c57cabf6201d9a677236	7fb5c526-be52-4145-a068-d3a54e0d77db	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 12:13:00	6.7s	determined_kirch	OK	6bfdcdac8b17c57cabf6201d9a677236	17ea42e8-8997-4647-9199-9302d85d1699	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 12:14:32	7.5s	dreamy_wiles	OK	6bfdcdac8b17c57cabf6201d9a677236	a0e28396-1974-41b4-a5ac-a92d9e14bb8e	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 12:34:37	7.5s	scruffy_liskov	OK	6bfdcdac8b17c57cabf6201d9a677236	8e62f649-0344-46e6-a4dd-ececc2831e6f	nextflow main.nf -c nextflow.config -profile docker
+2025-03-21 12:36:03	7.5s	golden_kalam	OK	6bfdcdac8b17c57cabf6201d9a677236	85aa6fa5-7c2d-4cf8-a506-84b6e0bdab42	nextflow main.nf -c nextflow.config -profile docker
+2025-03-22 23:50:47	9.2s	pedantic_wescoff	OK	6bfdcdac8b17c57cabf6201d9a677236	11b2adac-062c-4159-8a0b-1a4620894d62	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-22 23:52:36	7.6s	mad_khorana	OK	6bfdcdac8b17c57cabf6201d9a677236	64e9429c-cc74-40e5-b761-ba02c08ce185	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-22 23:54:30	7.5s	golden_stonebraker	OK	6bfdcdac8b17c57cabf6201d9a677236	00b84326-eb0c-4185-a41c-d7f83277fae4	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-22 23:56:11	7.2s	trusting_kimura	OK	6bfdcdac8b17c57cabf6201d9a677236	269c4721-63c9-4d18-96b3-c126e0ba34ce	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-23 00:04:55	8.2s	trusting_bartik	OK	6bfdcdac8b17c57cabf6201d9a677236	e84f6bb4-aac4-4bf5-8f93-ce87ded7dd7e	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-23 00:08:09	2.6s	trusting_goldstine	ERR	6bfdcdac8b17c57cabf6201d9a677236	f03970db-e3d2-430c-924b-c1543e39a299	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-23 00:09:36	7.7s	compassionate_heyrovsky	OK	6bfdcdac8b17c57cabf6201d9a677236	ed87a31d-c49b-426d-b0dc-6efc1b96cd64	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-23 00:11:03	7.4s	nice_shaw	OK	6bfdcdac8b17c57cabf6201d9a677236	7dec4220-c97f-459e-b845-90ba47c4015f	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-23 00:14:54	6.8s	nasty_boyd	OK	6bfdcdac8b17c57cabf6201d9a677236	7fb60b88-cb26-4516-83d6-612a20525fb2	nextflow run main.nf -c nextflow.config -profile docker
+2025-03-23 00:15:46	7.4s	maniac_linnaeus	OK	6bfdcdac8b17c57cabf6201d9a677236	df9443cb-4aa0-4053-ab6f-6c76fce673c3	nextflow run main.nf -c nextflow.config -profile docker
